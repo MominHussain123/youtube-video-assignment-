@@ -1,0 +1,270 @@
+
+*{
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+    border:none;
+    text-decoration: none;
+    text-transform: none;
+    outline: none;
+    transition: 2s linear ;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+    --primary:#8a8af2;
+    --black: #000;  
+    --white: #fff;
+    --light-black:#666;
+    --hover:rgba(244,244,244, 0.8);
+    --bg: #f9f9f9;
+    --border:0.1rem solid  rgba(0, 0, 0, 0.3);
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+html{
+    font-size: 62.5%;
+    outline: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+  
+body{
+    height: 500vh;
+}
+
+
+section{
+    padding: 5rem 9%;
+}
+
+
+
+
+
+/* HEADER */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    z-index: 1000;
+}
+
+.header .logo{
+    font-size: 2.5rem ;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--white);
+    color: var(--white);
+}
+
+.header .logo span{
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin: 0 1.8rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+.header .navbar a:hover{
+    color: var(--primary);
+    border-bottom: 0.3rem solid var(--primary);
+    padding-bottom: .5rem;
+
+
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    color: var(--white);
+    display: none;
+    cursor: pointer;
+
+}
+
+.header.active{
+    background-color: var(--white);
+    padding: 2rem 9%;
+    box-shadow: var(--box-shadow);
+    
+
+}
+
+.header.active .logo{
+    color: var(--black);
+    border-bottom: 1px solid var(--black);
+}
+.header.active .navbar a{
+color: var(--black);
+}
+
+.header.active .navbar a:hover{
+color: var(--primary);
+}
+
+.header.active #menu-btn{
+    color: var(--primary);
+}
+
+
+
+/* HOME */
+
+
+.home{
+    display: flex;
+    align-items: center;
+    position: relative; 
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background-image: url(./60-blue-gradient-abstract-background-rays-light-radial-effect-blur-used-for-background-wallpaper-empty-room-and-display-your-product-free-photo.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 10rem;
+    height: 100vh; 
+}
+
+
+.home .content{
+    flex:  1 1 45rem;
+    width: 100%;
+}
+.home .image{
+    flex:  1 1 45rem;
+}
+.home .image img{
+    width: 100%;
+   
+}
+.home .content h3{
+  font-size: 3.1rem;
+  color: var(--white);
+  line-height: 1.8;
+  font-family: 'Oswald' sans-serif;
+
+}
+.home .content h3 span{
+    color: var(--white);
+    font-family:'Oswald' sans-serif;
+}
+.home .content p{
+    color: var(--bg);
+    line-height: 1.8;
+    padding: 1rem;
+    font-size: 2rem;
+
+}
+
+
+
+
+/* ABOUT */
+
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 3rem;
+}
+.heading span{
+    color: var(--primary);
+    border-radius: 1rem;
+    padding: 0.4rem;
+    text-transform: uppercase;
+    border: 1px solid var(--primary);
+}
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5.0rem;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+.about .row .image img{
+    width: 100%;
+    object-fit: cover;
+    height: 50vh;
+}
+.about .row .content{
+    width: 100%;
+    flex:  1 1 45%;
+
+}
+.about .row .content .title{
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 1.8rem;
+    padding: 1rem 0;
+}
+.about .row .content .icons-container{
+    display:flex;
+    gap: 1rem;
+    padding-top:2rem;
+}
+.about .row .content .icons-container .icons{
+    flex: 1 1 15rem;
+    border-radius: 5rem;
+    border: var(--black);
+    padding: 1.5rem;
+    text-align: center;
+}
+.about .row .content .icons-container .icons i{
+    border-radius:50%;
+    background: var( --bg);
+    height: 5rem;
+    width: 5rem;
+    color: var(--primary);
+    line-height: 5rem;
+    font-size: 2rem;
+}
+.about .row .content .icons-container .icons h3{
+    color: var(--light-black);
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+@media (max-width:1135px){
+    .home{
+        height: 210vh;
+    }
+    .content{
+        text-align: center;
+    }
+}
+@media (max-width:839px){
+    #menu-btn{
+       display: inline-block;
+    
+    }
+    .navbar{
+        display: none;
+    }
+    .about .row .content .icons-container{
+        flex-wrap: wrap;
+    }
+    .about .row .content{
+        text-align: left;
+    }
+    .about .row .image img{
+        height: 20vh;
+    }
+}
